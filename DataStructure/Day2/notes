@@ -1,0 +1,142 @@
+int *ptr; //creates a pointer vaariable of 4 bytes ready to catch address of int
+//suggested store address of int only in ptr
+
+char *cptr; //creates a pointer vaariable of 4 bytes ready to catch address of char
+//suggested store address of char only in cptr
+
+else results will be unpredictable
+
+
+
+void (*fnptr)(void);		//declaration of function poointer meaning similar to 					//int *ptr;
+//fnptr here is a pointer to such a function who do not return anything as well which do not take any argument
+
+void s_sort(void *base, size_t neles,size_t size, int (*fnptr)(const  void *,const void *)
+{
+
+for(i=0;i<SIZE-1;i++)
+{
+    for(j=i+1;j<SIZE;j++)
+	{
+	    if((*fnptr)(&arr[i],&arr[j]))  
+		{
+			//swap
+		} 
+	}	
+}
+
+}
+
+qsort(address of location where collection is available,how many no.of elements from given base address,each element size,address of compare function);
+
+
+Expression can be written in 3 ways
+	1. Infix		a + b
+	2. Prefix		+ a b
+	3. Postfix 		a b +
+infix---->convert into prefix
+	  convert into postfix
+
+prefix---->convert into infix
+ 	  convert into postfix
+
+postfix---->convert into infix
+ 	    convert into prefix
+	    evaluate postfix expression
+
+operators	+  -  		  -------- 1		
+		/  *  %		  -------- 2
+		^                 -------- 3
+		$		  -------- 4
+
+CONVERT  INFIX TO POSTFIX
+	(((A + (B $ C)) - ((D ^ E) * F)) + (G % H))
+	(((A + BC$) - ((D ^ E) * F)) + (G % H))
+	(((A + BC$) - (DE^ * F)) + (G % H))
+	(((A + BC$) - DE^F*) + (G % H))
+	(((A + BC$) - DE^F*) + GH%)
+	((ABC$+ - DE^F*) + GH%)
+	(ABC$+DE^F*- + GH%)
+	ABC$+DE^F*-GH%+
+
+
+CONVERT  INFIX TO PREFIX
+	(((A + (B $ C)) - ((D ^ E) * F)) + (G % H))
+	(((A + $BC) - ((D ^ E) * F)) + (G % H))
+	(((A + $BC) - (^DE * F)) + (G % H))
+	(((A + $BC) - *^DEF) + (G % H))
+	(((A + $BC) - *^DEF) + %GH)
+	((+A$BC - *^DEF) + %GH)
+	(-+A$BC*^DEF + %GH)
+	+-+A$BC*^DEF%GH
+
+Convert infix to postfix
+
+if read char == '('
+	push read char on stack
+
+else if read char == operand
+	join read char to postfix
+
+else if read char == operator
+	peek element
+	
+	if peeked ele == '('
+		push read char (operator) on stack 	
+	
+	else if peeked ele == operator //if can be skipped
+		if(priority(peeked ele) >= priority(read char)
+		{
+			pop element from stack
+			join popped element to postfix
+			push read char(operator) on stack
+		}
+		else
+			push read char(operator) on stack
+
+else if read == ')' then
+		pop elements contineously till opening round bracket is not found
+		join every popped element to postfix except '(' opening bracket		
+
+		
+
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

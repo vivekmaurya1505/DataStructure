@@ -1,0 +1,48 @@
+int *ptr; //creates a pointer vaariable of 4 bytes ready to catch address of int
+//suggested store address of int only in ptr
+
+char *cptr; //creates a pointer vaariable of 4 bytes ready to catch address of char
+//suggested store address of char only in cptr
+
+else results will be unpredictable
+
+
+
+void (*fnptr)(void);		//declaration of function poointer meaning similar to 					//int *ptr;
+//fnptr here is a pointer to such a function who do not return anything as well which do not take any argument
+
+void s_sort(void *base, size_t neles,size_t size, int (*fnptr)(const  void *,const void *)
+{
+
+for(i=0;i<SIZE-1;i++)
+{
+    for(j=i+1;j<SIZE;j++)
+	{
+	    if((*fnptr)(&arr[i],&arr[j]))  
+		{
+			//swap
+		} 
+	}	
+}
+
+}
+
+qsort(address of location where collection is available,how many no.of elements from given base address,each element size,address of compare function);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
